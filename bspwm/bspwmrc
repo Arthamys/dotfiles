@@ -1,0 +1,61 @@
+#!/bin/sh
+
+sxhkd &
+
+if [[ $HOME = "/home/san" ]]
+then
+
+  setxkbmap -option compose:ralt
+  setxkbmap -option caps:escape
+
+fi
+
+bspc monitor -d cli firefox code
+
+#bspc config border_width        2
+bspc config border_width        6
+bspc config window_gap          12
+for desktop in $(bspc query -D); do
+  bspc config -d $desktop border_width 4;
+  bspc config -d $desktop window_gap 7;
+done
+
+bspc config top_padding  0
+bspc config bottom_padding  32
+bspc config left_padding    2
+bspc config right_padding   2
+
+bspc config auto_cancel	    true
+bspc config focus_by_distance   true
+
+$HOME/.scripts/update_monitors.sh
+
+bspc config split_ratio 0.5
+bspc config normal_border_color "#444444"
+bspc config focused_border_color "#cccccc"
+bspc config presel_border_color "#4A90D9"
+bspc config urgent_border_color "#4A90D9"
+bspc config normal_sticky_border_color "#555555"
+bspc config focused_sticky_border_color "#AAAAAA"
+bspc config initial_polarity second_child
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+bspc config focus_follows_pointer true
+bspc config ignore_ewmh_focus true
+
+bspc rule -a vim split_dir=up split_ratio=0.835
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Firefox desktop='^2'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
+
+
+#tint2 -c ~/.config/tint2/launcherrc &
+#tint2 -c ~/.config/tint2/trayrc &
+#sleep 1s && tint2 -c ~/.config/tint2/taskbarrc &
+#nm-applet &
+compton &
+feh --bg-scale ~/.wallpapers/wallhaven-pepe.png
+$HOME/.config/polybar/launch.sh
