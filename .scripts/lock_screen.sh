@@ -5,4 +5,4 @@
 #/usr/bin/i3lock --pointer=win -i /tmp/blurred.png -b
 #rm /tmp/lock.png /tmp/blurred.png
 
-i3lock -i /home/san/Pictures/1469599716541.png
+i3lock -i /home/san/.wallpapers/1518715279450.png

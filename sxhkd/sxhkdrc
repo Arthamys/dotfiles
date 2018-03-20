@@ -145,7 +145,7 @@ super + w
 	changeDesktop.sh
 # Lock computer
 alt + l
-	lock_screen.sh
+	/home/san/.scripts/lock_screen.sh
 
 Print
 	gnome-screenshot
