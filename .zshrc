@@ -1,3 +1,11 @@
+if [[ $HOME = "/home/san" ]]
+then
+
+  setxkbmap -option compose:ralt
+  setxkbmap -option caps:escape
+
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/san/.oh-my-zsh
 export LOGNAME="bill"
@@ -73,7 +81,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/llvm-5.0/bin"
-export PATH="$PATH:$HOME/Downloads/clion-2017.3/bin"
+export PATH="$PATH:$HOME/Downloads/GoLand-2017.3.3/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -117,6 +125,7 @@ alias cls='clear && ls'
 alias ccc='gcc -Wall -Wextra -Werror'
 alias gpt='g++ -W -Wall'
 alias gpp='gpt'
+alias svim='sudo vim'
 alias v='vim'
 alias bim='vim'
 alias vom='vim'
@@ -127,5 +136,10 @@ alias dir='ls'
 alias bat='acpi --battery'
 alias mc='make -C build'
 alias gnomewifi='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
+alias vimrc='vim ~/.vimrc'
+alias ocaml='rlwrap ocaml'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# OPAM configuration
+. /home/san/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
