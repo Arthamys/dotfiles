@@ -1,0 +1,1 @@
+I use numix icons, package numix-icon-theme-pack-git on the AUR
