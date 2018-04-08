@@ -13,10 +13,10 @@ fi
 bspc monitor -d cli firefox code
 
 #bspc config border_width        2
-bspc config border_width        6
+bspc config border_width        0
 bspc config window_gap          12
 for desktop in $(bspc query -D); do
-  bspc config -d $desktop border_width 4;
+  bspc config -d $desktop border_width 0;
   bspc config -d $desktop window_gap 7;
 done
 
