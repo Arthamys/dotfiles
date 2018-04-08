@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 
 " General code utility
+Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'ntpeters/vim-better-whitespace'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -44,6 +45,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 " Colorschmes
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
+Plug 'chriskempson/vim-tomorrow-theme'
 
 call plug#end()
 
@@ -248,6 +250,9 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 
 " Pandoc variables
 let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby", "c", "haskell", "bash=sh", "cpp", "javascript"]
+
+" UltiSnip
+let g:UltiSnipsExpandTrigger="<A-Space>"
 
 "*****************************************************************************
 "" Autocmd Rules
