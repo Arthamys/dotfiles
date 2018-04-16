@@ -17,12 +17,14 @@ Plug 'tpope/vim-repeat'
 " Moving around
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'elzr/vim-json'
 
 " Status line
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Version control
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 " General code utility
 Plug 'sirver/UltiSnips'
@@ -36,6 +38,7 @@ Plug 'scrooloose/nerdcommenter'
 " Completion
 Plug 'Valloric/YouCompleteMe'
 Plug 'eagletmt/neco-ghc'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
