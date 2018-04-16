@@ -57,5 +57,5 @@ bspc rule -a Firefox desktop='^2'
 #sleep 1s && tint2 -c ~/.config/tint2/taskbarrc &
 #nm-applet &
 compton &
-feh --bg-scale ~/.wallpapers/1516483994513-2.jpg
+feh --bg-scale ~/.wallpapers/alena-aenami-quiet-1px.jpg
 $HOME/.config/polybar/launch.sh
