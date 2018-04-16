@@ -1,0 +1,2 @@
+cp ~/.xinitrc.bspwm ~/.xinitrc
+startx
