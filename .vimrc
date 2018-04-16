@@ -35,6 +35,7 @@ Plug 'scrooloose/nerdcommenter'
 
 " Completion
 Plug 'Valloric/YouCompleteMe'
+Plug 'eagletmt/neco-ghc'
 
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -46,6 +47,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -116,10 +118,16 @@ autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4
 "*****************************************************************************
 "" Styling
 "*****************************************************************************
-color gruvbox
-set background=dark
-let g:gruvbox_contrast_dark='soft'
+"color gruvbox
+"set background=dark
+"let g:gruvbox_contrast_dark='soft'
+" In order to have matching vim theme and shell theme using base 16
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 syntax on
+
 
 "Minimum of lines for scoll offset on page
 set scrolloff=5
@@ -211,6 +219,8 @@ let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_autoclose_preview_window_after_insertion = 0
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+" Add completion engine for haskell (neco-ghc)
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 
 " Syntastic
