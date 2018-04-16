@@ -6,11 +6,14 @@ then
 
 fi
 
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/san/.oh-my-zsh
 export LOGNAME="bill"
 export FULLNAME="Galilee Enguehard"
-#export TERM="xterm-256color"
+export TERM="xterm-256color"
 export EPI_NAME="Galilee Enguehard"
 export EPI_LOGIN="engueh_a"
 #export TERM="xterm-256color"
@@ -81,7 +84,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/llvm-5.0/bin"
-export PATH="$PATH:$HOME/Downloads/GoLand-2017.3.3/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
