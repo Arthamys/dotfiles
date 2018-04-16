@@ -136,6 +136,24 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	brightnessScript.sh "-7"
 
+# Volume up
+XF86AudioRaiseVolume
+	volumeUp.sh
+# Volume down
+XF86AudioLowerVolume
+	volumeDown.sh
+
+# Volume mute toggle
+XF86AudioMute
+	volumeMute.sh
+
+# Music Toggle
+XF86AudioPlay
+# Music next
+XF86AudioNext
+#music prev
+XF86AudioPrev
+
 # Launch Spotify
 super + shift + m
 	/usr/bin/spotify
