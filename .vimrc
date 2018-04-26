@@ -209,9 +209,9 @@ nnoremap <Leader>d :bp\|bd #<CR>
 map <Leader><space> <Plug>(easymotion-prefix)
 
 "Fugitive keybinds
-nmap <C-K> :Gcommit<CR>
-nmap <C-A> :Gwrite<CR>
-nmap <C-P> :Gpush<CR>
+nnoremap <C-K> :Gcommit<CR>
+nnoremap <C-A> :Gwrite<CR>
+nnoremap <C-P> :Gpush<CR>
 
 "NERDTree
 "nnoremap <Leader>p :CtrlP<CR>
