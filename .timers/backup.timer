@@ -1,0 +1,9 @@
+[Unit]
+Description=Regularly save important files to my backup server
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target

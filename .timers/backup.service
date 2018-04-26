@@ -1,0 +1,6 @@
+[Unit]
+Description=Save important files to off-world server
+
+[Service]
+User=san
+ExecStart=/home/san/.scripts/backup.sh
