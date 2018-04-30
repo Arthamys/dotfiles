@@ -84,6 +84,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/llvm-5.0/bin"
+export PATH="$PATH:/usr/lib/jvm/intellij-jdk/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -140,8 +141,16 @@ alias mc='make -C build'
 alias gnomewifi='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 alias vimrc='vim ~/.vimrc'
 alias ocaml='rlwrap ocaml'
+alias carbo='cargo build'
+alias cargro='cargo run'
+alias cargon='cargo new'
+alias monerofg='docker run -it -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero'
+alias monerobg='docker run -it -d -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # OPAM configuration
 . /home/san/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# NVM
+source /usr/share/nvm/init-nvm.sh
