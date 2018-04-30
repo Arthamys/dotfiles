@@ -43,6 +43,12 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
 
+"Rust
+"TODO: Install rustfmt
+Plug 'rust-lang/rust.vim'
+
+"Markdown preview
+"Plug 'mgor/vim-markdown-grip'
 " Markdown pandoc highlighting
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
