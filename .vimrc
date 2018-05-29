@@ -34,6 +34,7 @@ Plug 'ntpeters/vim-better-whitespace'
 " For the ```", (, {, [``` symbols
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
 
 " Completion
 Plug 'Valloric/YouCompleteMe'
@@ -111,7 +112,7 @@ autocmd! BufWritePost $MYVIMRC source $MYVIMRC
 
 set autoindent smartindent
 set smarttab
-set tabstop=8
+set tabstop=4
 set shiftwidth=2
 set softtabstop=2
 set noexpandtab
@@ -208,6 +209,10 @@ vnoremap \ss y/<C-R>"<CR>
 " Close buffer without closing the split
 nnoremap <Leader>d :bp\|bd #<CR>
 
+" No scrolling in insert mode
+inoremap <ScrollWheelUp> <Nop>
+inoremap <ScrollWheelDown> <Nop>
+
 "*****************************************************************************
 "" Plugin Configuration
 "*****************************************************************************
@@ -229,9 +234,11 @@ nnoremap <C-P> :Gpush<CR>
 "noremap <Leader>f :YcmCompleter FixIt<CR>
 
 " YouCompleteMe
+let g:clang_complete_auto = 1
+let g:clang_complete_copen = 1
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_autoclose_preview_window_after_insertion = 0
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " Add completion engine for haskell (neco-ghc)
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
@@ -276,7 +283,9 @@ let g:CtrlSpaceSaveWorkspaceOnExit = 1
 let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby", "c", "haskell", "bash=sh", "cpp", "javascript"]
 
 " UltiSnip
-let g:UltiSnipsExpandTrigger="<A-Space>"
+let g:UltiSnipsExpandTrigger="<C-l>"
+let g:UltiSnipsJumpForwardTrigger=""
+let g:UltiSnipsJumpBackwardTrigger=""
 
 "*****************************************************************************
 "" Autocmd Rules
