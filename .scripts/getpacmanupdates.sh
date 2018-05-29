@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# the `checkupdates` binary is in the pacman-contrib package
 # Get number of available updates for pacman
 
 UPDATE_COUNT=$(checkupdates | wc -l)
