@@ -64,7 +64,7 @@ font-2 = "Font Awesome 5 Free:style=Solid:size=11;0"
 font-3 = "Font Awesome 5 Brands:style=Regular:size=11;0"
 
 modules-left = bspwm
-modules-center =
+modules-center = cpufreq
 modules-right = dlater updates backlight volume wifi wired battery date
 
 tray-position = right
@@ -275,6 +275,11 @@ exec = ~/.scripts/getpacmanupdates.sh
 format-foreground = ${colors.updates}
 interval = 60
 
+[module/cpufreq]
+type = custom/script
+exec = cpupower frequency-info -fm | grep -oP '(?<=frequency: )([^ ]+ [^ ]+)'
+interval = 2
+format-underline = #f90000
 
 [module/dlater]
 type = custom/script

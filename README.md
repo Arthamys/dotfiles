@@ -12,6 +12,7 @@ Personnal dotfiles for Archlinux
   Input manager for bspwm
 * Polybar
   Bar with easy configuration
+  The cpufreq module needs the cpupower package to run
 * Dunst
   Notification server with icon and transparency support
   [Service might crash when no display environment variable is accesible](https://github.com/dunst-project/dunst/issues/347)
@@ -23,3 +24,4 @@ Personnal dotfiles for Archlinux
   Install a `<job>.timer` systemd Unit file as well as a `<job>.service` to
   `~/.config/systemd/user/` and start the `.timer` job with:
   `systemctl --user enable timer`.
+
