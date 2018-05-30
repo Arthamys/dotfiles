@@ -149,10 +149,13 @@ XF86AudioMute
 
 # Music Toggle
 XF86AudioPlay
+	playerctl play-pause
 # Music next
 XF86AudioNext
+	playerctl next
 #music prev
 XF86AudioPrev
+	playerctl previous
 
 # Launch Spotify
 super + shift + m
