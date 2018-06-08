@@ -14,6 +14,8 @@ call plug#begin()
 " General Vim improvement
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'tpope/vim-repeat'
+Plug 'skywind3000/asyncrun.vim'
+
 " Moving around
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
