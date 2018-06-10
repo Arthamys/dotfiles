@@ -89,6 +89,9 @@ export PATH="$PATH:/usr/lib/jvm/intellij-jdk/bin"
 
 source $ZSH/oh-my-zsh.sh
 
+fpath+=~/.zfunc
+compinit
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -141,11 +144,15 @@ alias mc='make -C build'
 alias gnomewifi='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 alias vimrc='vim ~/.vimrc'
 alias ocaml='rlwrap ocaml'
+alias ucos='ssh cs120scz@ieng6.ucsd.edu'
 alias carbo='cargo build'
-alias cargro='cargo run'
-alias cargon='cargo new'
-alias monerofg='docker run -it -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero'
-alias monerobg='docker run -it -d -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero'
+alias krgro='cargo run'
+alias krgon='cargo new'
+alias krgo='cargo'
+alias skrgo='cargo test'
+alias vagup='vagrant up'
+alias vassh='vagrant ssh'
+alias dotfiles='cd ~/Documents/config/dotfiles'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
