@@ -47,7 +47,6 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'neovimhaskell/haskell-vim'
 
 "Rust
-"TODO: Install rustfmt
 Plug 'rust-lang/rust.vim'
 
 "Markdown preview
@@ -126,6 +125,9 @@ set cinoptions = ">1s-2sn-1s:1sl1sg1sh1st0i1sc1s(0"
 
 " Indentation options for Haskell
 autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4
+
+" Formating for rust
+let g:rustfmt_autosave = 1
 
 "*****************************************************************************
 "" Styling
