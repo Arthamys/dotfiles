@@ -11,14 +11,14 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/san/.oh-my-zsh
-export LOGNAME="bill"
+export LOGNAME="san"
 export FULLNAME="Galilee Enguehard"
 export TERM="xterm-256color"
 export EPI_NAME="Galilee Enguehard"
 export EPI_LOGIN="engueh_a"
 #export TERM="xterm-256color"
 #export COLORTERM='rxvt-unicode-256color'
-export USER="Bill"
+export USER="san"
 export VISUAL='vim'
 export LC_ALL="en_US.UTF-8"
 # Fixes blank windows for Java GUIs
@@ -119,7 +119,7 @@ compinit
 alias ls='ls --color'
 alias vi='vim'
 alias ne='emacs -nw'
-alias oktamer='i3lock -i /home/san/Pictures/1469599716541.png'
+alias oktamer='i3lock -i /home/san/Pictures/one-punch-man-face-swap.png'
 alias szsh='source ~/.zshrc'
 alias nezsh='ne ~/.zshrc'
 alias sl='ls'
@@ -144,7 +144,6 @@ alias mc='make -C build'
 alias gnomewifi='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 alias vimrc='vim ~/.vimrc'
 alias ocaml='rlwrap ocaml'
-alias ucos='ssh cs120scz@ieng6.ucsd.edu'
 alias carbo='cargo build'
 alias krgro='cargo run'
 alias krgon='cargo new'
