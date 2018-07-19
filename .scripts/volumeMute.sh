@@ -1,2 +1,4 @@
 #!/bin/bash
-pactl set-sink-mute 0 toggle
+SINK=$(pactl list sinks | head -n 1 | awk '{ print $NF }'  |sed 's/#//')
+
+pactl set-sink-mute $SINK toggle
