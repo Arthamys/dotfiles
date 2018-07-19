@@ -37,6 +37,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-syntastic/syntastic'
 
 " Completion
 Plug 'Valloric/YouCompleteMe'
@@ -54,6 +55,7 @@ Plug 'rust-lang/rust.vim'
 " Markdown pandoc highlighting
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+
 " Colorschmes
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
@@ -111,7 +113,7 @@ autocmd! BufWritePost $MYVIMRC source $MYVIMRC
 "" Indentation Configuration
 "*****************************************************************************
 
-set autoindent smartindent
+"set autoindent smartindent
 set smarttab
 set tabstop=4
 set shiftwidth=2
