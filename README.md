@@ -22,6 +22,15 @@ Personnal dotfiles for Archlinux
   The recommanded tool to manage recurring chronological tasks is [Systemd's
   Timers system](https://wiki.archlinux.org/index.php/Systemd/Timers).
   Install a `<job>.timer` systemd Unit file as well as a `<job>.service` to
-  `~/.config/systemd/user/` and start the `.timer` job with:
+  `~/.config/systemd/ user/` and start the `.timer` job with:
   `systemctl --user enable timer`.
+
+* RAW Files
+
+  - GIMP
+    To enable RAW image editing with GIMP, install `nufraw` which adds support.
+
+  - Nautilus
+    RAW/ARW files don't have thumbnails natively under Nautilus.
+    Install `ufraw-thumbnailer` to add thumbnail generation for these file types.
 
