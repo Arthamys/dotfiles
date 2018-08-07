@@ -1,3 +1,4 @@
 systemctl --user set-environment DISPLAY
+eval $(ssh-agent)
 sxhkd &
 exec bspwm

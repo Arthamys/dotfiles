@@ -1,2 +1,3 @@
 systemctl --user import-environment DISPLAY
+eval $(ssh-agent)
 exec gnome-session
