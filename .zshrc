@@ -86,6 +86,8 @@ export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/llvm-5.0/bin"
 export PATH="$PATH:/usr/lib/jvm/intellij-jdk/bin"
 export PATH="$PATH:/home/san/.gem/ruby/2.5.0/bin"
+
+export GOPATH="/home/san/go-work"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
