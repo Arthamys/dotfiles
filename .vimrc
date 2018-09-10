@@ -17,7 +17,6 @@ Plug 'tpope/vim-repeat'
 Plug 'skywind3000/asyncrun.vim'
 
 " Moving around
-"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json'
 
@@ -38,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-syntastic/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Completion
 Plug 'Valloric/YouCompleteMe'
@@ -49,6 +49,9 @@ Plug 'neovimhaskell/haskell-vim'
 
 "Rust
 Plug 'rust-lang/rust.vim'
+
+"Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 "Markdown preview
 "Plug 'mgor/vim-markdown-grip'
