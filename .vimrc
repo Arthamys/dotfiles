@@ -5,6 +5,7 @@ if &term =~ '256color'
 endif
 set encoding=utf-8
 
+set nocompatible
 
 "*****************************************************************************
 "" Vim-Plug Plug-ins
@@ -72,7 +73,7 @@ call plug#end()
 "" Global Configuration
 "*****************************************************************************
 
-filetype plugin indent on
+filetype indent on
 
 " Epitech
 "let g:epi_login = 'engueh_a'
@@ -276,7 +277,6 @@ let g:strip_whitespace_on_save=1
 highlight ExtraWhitespace ctermbg=red
 
 " ctrlspace
-set nocompatible
 set hidden
 set showtabline=0
   " Use ag to do the glob searches
