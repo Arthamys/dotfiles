@@ -54,6 +54,9 @@ Plug 'rust-lang/rust.vim'
 "Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+"Api Blueprint
+Plug 'kylef/apiblueprint.vim'
+
 "Markdown preview
 "Plug 'mgor/vim-markdown-grip'
 " Markdown pandoc highlighting
@@ -131,6 +134,8 @@ set cinoptions = ">1s-2sn-1s:1sl1sg1sh1st0i1sc1s(0"
 
 " Indentation options for Haskell
 autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4
+
+autocmd Filetype proto setlocal expandtab tabstop=4 shiftwidth=4
 
 " Formating for rust
 let g:rustfmt_autosave = 1
@@ -295,6 +300,9 @@ let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby", "c", "haskell", "bash=sh"
 let g:UltiSnipsExpandTrigger="<C-l>"
 let g:UltiSnipsJumpForwardTrigger=""
 let g:UltiSnipsJumpBackwardTrigger=""
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'ra'
 
 "*****************************************************************************
 "" Autocmd Rules
