@@ -50,6 +50,7 @@ Plug 'neovimhaskell/haskell-vim'
 
 "Rust
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 "Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -304,6 +305,9 @@ let g:UltiSnipsJumpBackwardTrigger=""
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
+
+" Rust Racer
+let g:racer_cmd = "/home/bane/.cargo/bin/racer"
 
 "*****************************************************************************
 "" Autocmd Rules

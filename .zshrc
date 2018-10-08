@@ -92,6 +92,10 @@ export GOPATH="/home/bane/go-work"
 
 export PATH="$PATH:/$GOPATH/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+#
+
+# Rust Racer env variable
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 source $ZSH/oh-my-zsh.sh
 
