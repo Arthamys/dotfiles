@@ -1,4 +1,4 @@
-if [[ $HOME = "/home/san" ]]
+if [[ $HOME = "/home/bane" ]]
 then
 
   setxkbmap -option compose:ralt
@@ -10,15 +10,15 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/san/.oh-my-zsh
-export LOGNAME="san"
+export ZSH=/home/bane/.oh-my-zsh
+export LOGNAME="bane"
 export FULLNAME="Galilee Enguehard"
 export TERM="xterm-256color"
 export EPI_NAME="Galilee Enguehard"
 export EPI_LOGIN="engueh_a"
 #export TERM="xterm-256color"
 #export COLORTERM='rxvt-unicode-256color'
-export USER="san"
+export USER="bane"
 export VISUAL='vim'
 export LC_ALL="en_US.UTF-8"
 # Fixes blank windows for Java GUIs
@@ -85,9 +85,10 @@ export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/llvm-5.0/bin"
 export PATH="$PATH:/usr/lib/jvm/intellij-jdk/bin"
-export PATH="$PATH:/home/san/.gem/ruby/2.5.0/bin"
+export PATH="$PATH:/home/bane/.gem/ruby/2.5.0/bin"
+export PATH="$PATH:/$HOME/.cargo/bin"
 
-export GOPATH="/home/san/go-work"
+export GOPATH="/home/bane/go-work"
 
 export PATH="$PATH:/$GOPATH/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -124,7 +125,7 @@ compinit
 alias ls='ls --color'
 alias vi='vim'
 alias ne='emacs -nw'
-alias oktamer='i3lock -i /home/san/Pictures/one-punch-man-face-swap.png'
+alias oktamer='i3lock -i /home/bane/Pictures/one-punch-man-face-swap.png'
 alias szsh='source ~/.zshrc'
 alias nezsh='ne ~/.zshrc'
 alias sl='ls'
@@ -161,7 +162,7 @@ alias dotfiles='cd ~/Documents/config/dotfiles'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # OPAM configuration
-. /home/san/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+. /home/bane/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # NVM
 source /usr/share/nvm/init-nvm.sh
