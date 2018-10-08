@@ -269,7 +269,7 @@ let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_c_include_dirs = [ '../includes', 'includes', 'include', '../include' ]
-let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_rust_checkers = ['racer']
 
 " Vim Airline
 let g:airline_powerline_fonts = 1
