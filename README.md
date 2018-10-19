@@ -34,3 +34,7 @@ Personnal dotfiles for Archlinux
     RAW/ARW files don't have thumbnails natively under Nautilus.
     Install `ufraw-thumbnailer` to add thumbnail generation for these file types.
 
+* Faster `grep`
+  I use `ag` as a replacement for `grep`.
+  It has the same features, but works faster, and has a nicer output.
+
