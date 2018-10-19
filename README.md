@@ -37,4 +37,6 @@ Personnal dotfiles for Archlinux
 * Faster `grep`
   I use `ag` as a replacement for `grep`.
   It has the same features, but works faster, and has a nicer output.
+  On Archlinux `ag` is found in the Community package named
+  `the_silver_searcher`
 
