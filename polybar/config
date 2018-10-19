@@ -31,9 +31,10 @@ extra7  = #f4f1ed
 
 
 [bar/main]
-monitor = eDP-1
+;monitor = eDP-1
 ;monitor = LVDS1
 ;monitor-fallback = HDMI3
+monitor = DVI-D-1
 override-redirect = false
 bottom = true
 
