@@ -1,4 +1,6 @@
-Personnal dotfiles for Archlinux
+# Personnal dotfiles for Archlinux
+
+## General Application Notes
 
 * Tmux
   Terminal multiplexer
@@ -34,3 +36,9 @@ Personnal dotfiles for Archlinux
     RAW/ARW files don't have thumbnails natively under Nautilus.
     Install `ufraw-thumbnailer` to add thumbnail generation for these file types.
 
+## Vim Notes
+
+* Code Completion
+  * Rust
+	install [`racer`](https://github.com/racer-rust/racer), a code completion
+	utility.

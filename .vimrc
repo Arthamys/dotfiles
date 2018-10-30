@@ -44,6 +44,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'eagletmt/neco-ghc'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'racer-rust/vim-racer'
 
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -258,8 +259,12 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " Add completion engine for haskell (neco-ghc)
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
+" Racer
+let g:racer_cmd = "/home/user/.cargo/bin/racer"
+
 
 " Syntastic
+let g:syntastic_rust_checkers = ['rustc']
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
