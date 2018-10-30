@@ -157,6 +157,8 @@ alias skrgo='cargo test'
 alias vagup='vagrant up'
 alias vassh='vagrant ssh'
 alias dotfiles='cd ~/Documents/config/dotfiles'
+alias gmaster='git checkout master'
+alias dockerc='docker-compose'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
