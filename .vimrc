@@ -37,8 +37,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'w0rp/ale'
 
 " Completion
 Plug 'Valloric/YouCompleteMe'
@@ -262,17 +262,6 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 " Racer
 let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
-
-" Syntastic
-let g:syntastic_rust_checkers = ['rustc']
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_auto_loc_list=1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_c_include_dirs = [ '../includes', 'includes', 'include', '../include' ]
 
 " Vim Airline
 let g:airline_powerline_fonts = 1
