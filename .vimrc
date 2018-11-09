@@ -64,6 +64,9 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+" Toml
+Plug 'cespare/vim-toml'
+
 " Colorschmes
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
