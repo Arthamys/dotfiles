@@ -73,6 +73,9 @@ Plug 'morhetz/gruvbox'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
 
+" Writting
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 
@@ -265,6 +268,8 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 " Racer
 let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
+" ALE
+let g:ale_linter = {'rust': ['rls']}
 
 " Vim Airline
 let g:airline_powerline_fonts = 1
