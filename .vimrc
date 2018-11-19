@@ -269,7 +269,7 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
 " ALE
-let g:ale_linter = {'rust': ['rls']}
+let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
 
 " Vim Airline
 let g:airline_powerline_fonts = 1
