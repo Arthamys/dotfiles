@@ -73,6 +73,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
+Plug 'connorholyday/vim-snazzy'
 
 " Writting
 Plug 'junegunn/goyo.vim'
@@ -162,6 +163,8 @@ set background=dark
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
+else
+  color snazzy
 endif
 syntax on
 
