@@ -1,0 +1,6 @@
+[Unit]
+Description=Remove dangling docker volumes
+
+[Service]
+User=san
+ExecStart=/home/san/.scripts/docker_cleanup.sh

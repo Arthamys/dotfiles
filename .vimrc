@@ -37,13 +37,14 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'w0rp/ale'
 
 " Completion
 Plug 'Valloric/YouCompleteMe'
 Plug 'eagletmt/neco-ghc'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'racer-rust/vim-racer'
 
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -64,11 +65,17 @@ Plug 'kylef/apiblueprint.vim'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+" Toml
+Plug 'cespare/vim-toml'
+
 " Colorschmes
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
+
+" Writting
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -113,6 +120,10 @@ set clipboard=unnamedplus
 set mouse-=a
 set hidden
 set nofoldenable
+
+if has('nvim')
+  set inccommand=split
+endif
 
 "Automatically apply changes to .vimrc
 autocmd! BufWritePost $MYVIMRC source $MYVIMRC
@@ -259,17 +270,11 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " Add completion engine for haskell (neco-ghc)
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
+" Racer
+let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
-" Syntastic
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_style_error_symbol = '✗'
-let g:syntastic_style_warning_symbol = '⚠'
-let g:syntastic_auto_loc_list=1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_c_include_dirs = [ '../includes', 'includes', 'include', '../include' ]
-let g:syntastic_rust_checkers = ['racer']
+" ALE
+let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
 
 " Vim Airline
 let g:airline_powerline_fonts = 1

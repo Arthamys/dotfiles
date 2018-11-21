@@ -133,6 +133,8 @@ alias cls='clear && ls'
 alias ccc='gcc -Wall -Wextra -Werror'
 alias gpt='g++ -W -Wall'
 alias gpp='gpt'
+alias n='nvim'
+alias vim='nvim'
 alias svim='sudo vim'
 alias v='vim'
 alias bim='vim'
@@ -155,6 +157,8 @@ alias skrgo='cargo test'
 alias vagup='vagrant up'
 alias vassh='vagrant ssh'
 alias dotfiles='cd ~/Documents/config/dotfiles'
+alias gmaster='git checkout master'
+alias dockerc='docker-compose'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

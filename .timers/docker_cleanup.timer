@@ -1,0 +1,9 @@
+[Unit]
+Description=Free up the dangling volumes poluting /var/lib/docker/overlay2
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
