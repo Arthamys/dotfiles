@@ -119,7 +119,7 @@ compinit
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls --color'
-alias vi='vim'
+alias vi='nvim'
 alias ne='emacs -nw'
 alias oktamer='i3lock -i /home/bane/Pictures/one-punch-man-face-swap.png'
 alias szsh='source ~/.zshrc'
@@ -141,7 +141,6 @@ alias bim='vim'
 alias vom='vim'
 alias im='vim'
 alias cim='vim'
-alias grep='ag'
 alias gerp='grep'
 alias dir='ls'
 alias bat='acpi --battery'
@@ -166,4 +165,4 @@ alias dockerc='docker-compose'
 . /home/bane/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # NVM
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
