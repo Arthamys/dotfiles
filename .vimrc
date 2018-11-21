@@ -120,6 +120,10 @@ set mouse-=a
 set hidden
 set nofoldenable
 
+if has('nvim')
+  set inccommand=split
+endif
+
 "Automatically apply changes to .vimrc
 autocmd! BufWritePost $MYVIMRC source $MYVIMRC
 
