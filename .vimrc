@@ -5,6 +5,11 @@ if &term =~ '256color'
 endif
 set encoding=utf-8
 
+if has('nvim')
+  set runtimepath^=~/.vim runtimepath+=~/.vim/after
+  let &packpath = &runtimepath
+endif
+
 set nocompatible
 
 "*****************************************************************************
@@ -22,8 +27,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json'
 
 " Status line
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+
 " Version control
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
@@ -279,12 +284,12 @@ let g:racer_cmd = "/home/user/.cargo/bin/racer"
 " ALE
 let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
 
-" Vim Airline
-let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='angr'
- " For compatibility with Ctrl-Space
-let g:airline_executable_preview = 1
+" Vim lightline
+let g:lightline = {
+  \'colorscheme' : 'seoul256',
+  \}
+" Remove `-- INSERT --` text when switching modes
+set noshowmode
 
 " Better Whitespace
 let g:better_whitespace_enabled=1
