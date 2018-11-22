@@ -5,6 +5,11 @@ if &term =~ '256color'
 endif
 set encoding=utf-8
 
+if has('nvim')
+  set runtimepath^=~/.vim runtimepath+=~/.vim/after
+  let &packpath = &runtimepath
+endif
+
 set nocompatible
 
 "*****************************************************************************
@@ -72,6 +77,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
+Plug 'connorholyday/vim-snazzy'
 
 " Writting
 Plug 'junegunn/goyo.vim'
@@ -158,10 +164,11 @@ let g:rustfmt_autosave = 1
 "set background=dark
 "let g:gruvbox_contrast_dark='soft'
 " In order to have matching vim theme and shell theme using base 16
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+"if filereadable(expand("~/.vimrc_background"))
+  "let base16colorspace=256
+  "source ~/.vimrc_background
+"endif
+color snazzy
 syntax on
 
 
@@ -186,14 +193,14 @@ set cursorline
 "*****************************************************************************
 let mapleader=","
 
-inoremap <Up>		<NOP>
-inoremap <Down>		<NOP>
-inoremap <Left>		<NOP>
-inoremap <Right>	<NOP>
-noremap  <Up>		<NOP>
-noremap  <Down>		<NOP>
-noremap  <Left>		<NOP>
-noremap  <Right>	<NOP>
+inoremap <Up>       <NOP>
+inoremap <Down>     <NOP>
+inoremap <Left>     <NOP>
+inoremap <Right>    <NOP>
+noremap  <Up>       <NOP>
+noremap  <Down>     <NOP>
+noremap  <Left>     <NOP>
+noremap  <Right>    <NOP>
 
 nnoremap ; :
 nnoremap : ;
@@ -276,7 +283,13 @@ let g:racer_cmd = "/home/user/.cargo/bin/racer"
 let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
 
 " Vim Airline
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.left_sep='|'
+let g:airline_symbols.right_sep='|'
+let g:airline_symbols.readonly=''
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='angr'
  " For compatibility with Ctrl-Space
@@ -333,36 +346,36 @@ augroup END
 
 function! EPIConfig(task)
     if a:task == "set"
-	if expand("%") == "Makefile"
-	    execute "0read ~/.vim/headers/makefile"
-	elseif expand("%:e") == "h"
-	    execute "0read ~/.vim/headers/h"
-	elseif expand("%:e") == "c"
-	    execute "0read ~/.vim/headers/c"
-	elseif expand("%:e") == "hpp"
+    if expand("%") == "Makefile"
+        execute "0read ~/.vim/headers/makefile"
+    elseif expand("%:e") == "h"
+        execute "0read ~/.vim/headers/h"
+    elseif expand("%:e") == "c"
+        execute "0read ~/.vim/headers/c"
+    elseif expand("%:e") == "hpp"
         execute "0read ~/.vim/headers/e"
-	elseif expand("%:e") == "s"
+    elseif expand("%:e") == "s"
         execute "0read ~/.vim/headers/s"
-	endif
-	execute "%substitute,$FILE," . expand("%") . ",e"
-	execute "%substitute,$FN," . '\U' . expand("%:t:r") . ",e"
-	execute "%substitute,$FLDR," . expand("%:p:h:t") . ",e"
-	execute "%substitute,$PATH," . expand("%:p:h") . ",e"
-	execute "%substitute,$PROJ," . $PROJECT . ",e"
-	execute "%substitute,$NAME," . $EPI_NAME . ",e"
-	execute "%substitute,$NICK," . $EPI_LOGIN . ",e"
-	execute "%substitute,$DATE," . strftime("%a %b %d %H:%M:%S %Y") . ",e"
-	call EPIConfig("update")
-	normal Go
+    endif
+    execute "%substitute,$FILE," . expand("%") . ",e"
+    execute "%substitute,$FN," . '\U' . expand("%:t:r") . ",e"
+    execute "%substitute,$FLDR," . expand("%:p:h:t") . ",e"
+    execute "%substitute,$PATH," . expand("%:p:h") . ",e"
+    execute "%substitute,$PROJ," . $PROJECT . ",e"
+    execute "%substitute,$NAME," . $EPI_NAME . ",e"
+    execute "%substitute,$NICK," . $EPI_LOGIN . ",e"
+    execute "%substitute,$DATE," . strftime("%a %b %d %H:%M:%S %Y") . ",e"
+    call EPIConfig("update")
+    normal Go
     elseif a:task == "update"
-	let cursor = getpos(".")
+    let cursor = getpos(".")
         execute "%substitute,Last update.*,Last update " . strftime("%a %b %d %H:%M:%S %Y") . " " . $EPI_NAME . ",e"
-	call setpos(".", cursor)
+    call setpos(".", cursor)
     endif
 endfunction
 
-"autocmd! BufNewFile		*.{c,h,hpp},Makefile	call EPIConfig("set")
-"autocmd! BufWritePre		*.{c,h,hpp},Makefile	call EPIConfig("update")
+"autocmd! BufNewFile        *.{c,h,hpp},Makefile    call EPIConfig("set")
+"autocmd! BufWritePre        *.{c,h,hpp},Makefile    call EPIConfig("update")
 " }
 
 "function! ProtectedHeader()
@@ -390,5 +403,5 @@ endfunction
 
 "au FileType c,h call GnuIndent()
 
-"autocmd BufNewFile		*.{c,h} call GnuIndent()
-"autocmd BufWritePre		*.{c,h} call GnuIndent()
+"autocmd BufNewFile        *.{c,h} call GnuIndent()
+"autocmd BufWritePre        *.{c,h} call GnuIndent()
