@@ -299,6 +299,11 @@ let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
 
+if has('nvim')
+  " Neovim considers the Ctrl + Space bind as the null character by default
+  nnoremap <C-Space> :CtrlSpace<CR>
+endif
+
 " Pandoc variables
 let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby", "c", "haskell", "bash=sh", "cpp", "javascript"]
 
