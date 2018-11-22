@@ -1,0 +1,46 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    color: white;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: white;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 3px solid white;
+}
+
+#pulseaudio, #clock {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#clock {
+    background-color: transparent;
+}
+
+#pulseaudio {
+  background-color: transparent;
+  color: white;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
