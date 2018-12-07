@@ -13,7 +13,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 export ZSH=/home/san/.oh-my-zsh
 export LOGNAME="san"
 export FULLNAME="Galilee Enguehard"
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export EPI_NAME="Galilee Enguehard"
 export EPI_LOGIN="engueh_a"
 #export TERM="xterm-256color"
@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
