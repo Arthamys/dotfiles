@@ -294,6 +294,7 @@ let g:airline_symbols.readonly=''
 let g:airline_theme='angr'
  " For compatibility with Ctrl-Space
 let g:airline_executable_preview = 1
+set noshowmode
 
 " Better Whitespace
 let g:better_whitespace_enabled=1
