@@ -38,6 +38,7 @@ Plug 'sirver/UltiSnips'
 Plug 'honza/vim-snippets'
 Plug 'ntpeters/vim-better-whitespace'
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/bin/fzf' | Plug 'junegunn/fzf.vim'
 " For the ```", (, {, [``` symbols
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
@@ -152,6 +153,7 @@ set cinoptions = ">1s-2sn-1s:1sl1sg1sh1st0i1sc1s(0"
 " Indentation options for Haskell
 autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4
 
+" Indentation options for protobuf
 autocmd Filetype proto setlocal expandtab tabstop=4 shiftwidth=4
 
 " Formating for rust
