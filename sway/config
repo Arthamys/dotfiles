@@ -22,13 +22,24 @@ set $menu rofi -show run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/bane/.wallpapers/white_flower.jpg fill
 #
 # Example configuration:
 #
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+output DVI-D-1 resolution 1920x1080 position 1920,0
+output HDMI-A-1 resolution 1920x1080 position 3840,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+#
+# Window colors
+#  The window that has focus.
+client.focused #4f5b66 #4f5b66 #c0c5ce #c0c5ce #4f5b66
+
+# The most recently focused view within a container which is not focused.
+client.focused_inactive #65737e #65737e #c0c5ce #c0c5ce #65737e
+
+# The most recently focused view within a container which is not focused.
+client.unfocused #343d46 #343d46 #c0c5ce #c0c5ce #343d46
 
 ### Idle configuration
 #
@@ -216,7 +227,7 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    position top
+    position bottom
     swaybar_command waybar
 }
 
