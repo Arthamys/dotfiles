@@ -143,12 +143,12 @@ set smarttab
 set tabstop=4
 set shiftwidth=2
 set softtabstop=2
-set noexpandtab
+set expandtab
 set listchars=tab:>.
 "" Display tabs
 set list
 
-set cinoptions = ">1s-2sn-1s:1sl1sg1sh1st0i1sc1s(0"
+set cinoptions = ">1s-2sn-1s:1sl1sg1sh1st0i1sc1s(0+10"
 
 " Indentation options for Haskell
 autocmd Filetype haskell setlocal expandtab tabstop=4 shiftwidth=4
@@ -283,6 +283,7 @@ let g:racer_cmd = "/home/user/.cargo/bin/racer"
 
 " ALE
 let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
+nnoremap <Leader>k :ALEGoToDefinition<CR>
 
 " Vim lightline
 let g:lightline = {
@@ -307,6 +308,12 @@ let g:CtrlSpaceSymbols = { "File:": " ", "CTab": " ", "Tabs": " ", "BM"
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
+
+if has('nvim')
+  " Neovim considers the Ctrl + Space bind as the null character by default
+  nnoremap <C-Space> :CtrlSpace<CR>
+endif
+
 
 " Pandoc variables
 let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby", "c", "haskell", "bash=sh", "cpp", "javascript"]
