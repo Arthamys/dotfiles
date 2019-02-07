@@ -32,6 +32,7 @@ Plug 'itchyny/lightline.vim'
 " Version control
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'rhysd/committia.vim'
 
 " General code utility
 Plug 'sirver/UltiSnips'
@@ -328,6 +329,23 @@ let g:ctrlp_working_path_mode = 'ra'
 
 " Rust Racer
 let g:racer_cmd = "/home/bane/.cargo/bin/racer"
+
+" Committia
+let g:committia_hooks = {}
+function! g:committia_hooks.edit_open(info)
+  " Additional settings
+  setlocal spell
+
+  " If no commit message, start with insert mode
+  if a:info.vcs ==# 'git' && getline(1) ==# ''
+    startinsert
+  endif
+
+  " Scroll the diff window from insert mode
+  " Map <C-n> and <C-p>
+  imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
+  imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
+endfunction
 
 "*****************************************************************************
 "" Autocmd Rules
