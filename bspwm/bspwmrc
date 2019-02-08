@@ -21,7 +21,7 @@ for desktop in $(bspc query -D); do
 done
 
 bspc config top_padding  0
-bspc config bottom_padding  32
+bspc config bottom_padding  0
 bspc config left_padding    2
 bspc config right_padding   2
 

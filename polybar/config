@@ -35,7 +35,7 @@ monitor = eDP-1
 ;monitor = LVDS1
 ;monitor-fallback = HDMI3
 override-redirect = false
-bottom = true
+bottom = false
 
 width = 1900
 height = 30
