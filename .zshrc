@@ -81,6 +81,7 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/llvm-5.0/bin"
@@ -169,3 +170,6 @@ alias dockerc='docker-compose'
 
 # NVM
 source /usr/share/nvm/init-nvm.sh
+
+# PYENV
+eval "$(pyenv init -)"
