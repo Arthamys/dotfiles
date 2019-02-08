@@ -11,7 +11,7 @@ export EPI_LOGIN="engueh_a"
 #export TERM="xterm-256color"
 #export COLORTERM='rxvt-unicode-256color'
 export USER="bane"
-export VISUAL='vim'
+export VISUAL='nvim'
 export LC_ALL="en_US.UTF-8"
 # Fixes blank windows for Java GUIs
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -24,7 +24,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="kphoen"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -43,7 +43,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -73,6 +73,7 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.bin"
 export PATH="$PATH:$HOME/.scripts"
 export PATH="$PATH:$HOME/llvm-5.0/bin"
