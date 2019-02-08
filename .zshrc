@@ -19,7 +19,7 @@ export EPI_LOGIN="engueh_a"
 #export TERM="xterm-256color"
 #export COLORTERM='rxvt-unicode-256color'
 export USER="san"
-export VISUAL='vim'
+export VISUAL='nvim'
 export LC_ALL="en_US.UTF-8"
 # Fixes blank windows for Java GUIs
 export _JAVA_AWT_WM_NONREPARENTING=1
