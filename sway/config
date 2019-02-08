@@ -45,10 +45,11 @@ client.unfocused #343d46 #343d46 #c0c5ce #c0c5ce #343d46
 #
 # Example configuration:
 #
-#exec swayidle \
-#    timeout 300 'swaylock -c 000000' \
-#    timeout 600 'swaymsg "output * dpms off"' \
-#       resume 'swaymsg "output * dpms on"' \
+exec swayidle \
+    timeout 300 'swaylock -c 000000' \
+    timeout 600 'swaymsg "output * dpms off"' \
+       resume 'swaymsg "output * dpms on"' \
+       before-sleep 'systemctl hybrid-sleep'
 #    before-sleep 'swaylock -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
