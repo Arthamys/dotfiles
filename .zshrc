@@ -165,5 +165,8 @@ alias dockerc='docker-compose'
 # OPAM configuration
 . /home/bane/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
+# PYENV configuration
+eval "$(pyenv init -)"
+
 # NVM
 #source /usr/share/nvm/init-nvm.sh
