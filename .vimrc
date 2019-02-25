@@ -284,6 +284,12 @@ let g:racer_experimental_completer = 1
 
 " ALE
 let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
+let g:ale_fixers = {
+	  \ 'javascript': ['prettier', 'eslint'],
+	  \ 'css': ['prettier'],
+	  \}
+
+let g:ale_fix_on_save = 1
 
 " Vim Airline
 "let g:airline_powerline_fonts = 1
