@@ -163,15 +163,12 @@ let g:rustfmt_autosave = 1
 "*****************************************************************************
 "" Styling
 "*****************************************************************************
-"color gruvbox
-"set background=dark
 "let g:gruvbox_contrast_dark='soft'
 " In order to have matching vim theme and shell theme using base 16
-"if filereadable(expand("~/.vimrc_background"))
-  "let base16colorspace=256
-  "source ~/.vimrc_background
-"endif
-color snazzy
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 syntax on
 
 
