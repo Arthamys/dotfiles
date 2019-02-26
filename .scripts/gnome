@@ -1,2 +1,3 @@
+#!/bin/bash
 cp ~/.xinitrc.gnome ~/.xinitrc
 startx
