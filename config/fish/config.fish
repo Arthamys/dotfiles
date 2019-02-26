@@ -14,7 +14,7 @@ abbr -a ocaml 'rlwrap ocaml'
 abbr -a dotfiles 'cd ~/Documents/config/dotfiles'
 abbr -a dockerc 'docker-compose'
 
-set -x PATH $PATH $HOME/.scripts
+set -x PATH $PATH $HOME/.scripts $HOME/.local/bin $HOME/.bin
 set -x TERM 'screen-256color'
 set -x VISUAL 'nvim'
 
