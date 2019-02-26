@@ -29,9 +29,9 @@ if test (echo $d) != ''
 	tmux ^ /dev/null; and exec true
 end
 
-if command -v aurman > /dev/null
-	abbr -a p 'aurman'
-	abbr -a up 'aurman -Syu'
+if command -v yay > /dev/null
+	abbr -a p 'yay'
+	abbr -a up 'yay -Syu'
 else
 	abbr -a p 'sudo pacman'
 	abbr -a up 'sudo pacman -Syu'
