@@ -14,7 +14,18 @@ abbr -a ocaml 'rlwrap ocaml'
 abbr -a dotfiles 'cd ~/Documents/config/dotfiles'
 abbr -a dockerc 'docker-compose'
 
+set -x PATH $PATH $HOME/.scripts
+set -x TERM 'screen-256color'
+set -x VISUAL 'nvim'
+
+# Base16 Shell
 if status --is-interactive
+    set BASE16_SHELL "$HOME/.config/base16-shell/"
+    source "$BASE16_SHELL/profile_helper.fish"
+end
+
+set d (string trim -- $DISPLAY)
+if test (echo $d) != ''
 	tmux ^ /dev/null; and exec true
 end
 
