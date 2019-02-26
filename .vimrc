@@ -32,6 +32,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Version control
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+Plug 'rhysd/committia.vim'
 
 " General code utility
 Plug 'sirver/UltiSnips'
