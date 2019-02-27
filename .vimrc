@@ -48,10 +48,20 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'w0rp/ale'
 
 " Completion
-Plug 'Valloric/YouCompleteMe'
+Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh',
+      \ }
+
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+" additional completion plugins
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+
 Plug 'eagletmt/neco-ghc'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'racer-rust/vim-racer'
 
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -144,7 +154,7 @@ set smarttab
 set tabstop=4
 set shiftwidth=2
 set softtabstop=2
-set noexpandtab
+set expandtab
 set listchars=tab:>.
 "" Display tabs
 set list
@@ -257,35 +267,78 @@ nnoremap <C-K> :Gcommit<CR>
 nnoremap <C-A> :Gwrite<CR>
 nnoremap <C-P> :Gpush<CR>
 
-"NERDTree
-"nnoremap <Leader>p :CtrlP<CR>
-" nnoremap  <F2> :NERDTreeToggle<CR>
-"map <C-e> ;NERDTreeToggle<CR>
+"Language Client
+" work around the lack of a global language client settings file:
+" https://github.com/rust-lang/rls/issues/1324
+" https://github.com/autozimu/LanguageClient-neovim/issues/431
+" I primarily want that for the ability to set `build_on_save`,
+" which I in turn want because of
+" https://github.com/autozimu/LanguageClient-neovim/issues/603
+let g:LanguageClient_settingsPath = expand('~/.config/nvim/lcs_settings.json')
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['/usr/bin/rls'],
+    \ }
+let g:LanguageClient_autoStart = 1
+" Nice errors
+let g:LanguageClient_diagnosticsDisplay = {
+    \     1: {
+    \         "name": "Error",
+    \         "texthl": "ALEError",
+    \         "signText": "✖",
+    \         "signTexthl": "ErrorMsg",
+    \         "virtualTexthl": "WarningMsg",
+    \     },
+    \     2: {
+    \         "name": "Warning",
+    \         "texthl": "ALEWarning",
+    \         "signText": "⚠",
+    \         "signTexthl": "ALEWarningSign",
+    \         "virtualTexthl": "Todo",
+    \     },
+    \     3: {
+    \         "name": "Information",
+    \         "texthl": "ALEInfo",
+    \         "signText": "ℹ",
+    \         "signTexthl": "ALEInfoSign",
+    \         "virtualTexthl": "Todo",
+    \     },
+    \     4: {
+    \         "name": "Hint",
+    \         "texthl": "ALEInfo",
+    \         "signText": "➤",
+    \         "signTexthl": "ALEInfoSign",
+    \         "virtualTexthl": "Todo",
+    \     },
+    \ }
 
-"nnoremap <F9> :make<CR>
-" Apply YCM FixIt
-"noremap <Leader>f :YcmCompleter FixIt<CR>
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 
-" YouCompleteMe
-let g:clang_complete_auto = 1
-let g:clang_complete_copen = 1
-let g:ycm_autoclose_preview_window_after_completion = 0
-let g:ycm_autoclose_preview_window_after_insertion = 0
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-" Add completion engine for haskell (neco-ghc)
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
+" Completion / ncm2
+autocmd BufEnter * call ncm2#enable_for_buffer()
+" Affects the visual representation of what happens after you hit <C-x><C-o>
+" https://neovim.io/doc/user/insert.html#i_CTRL-X_CTRL-O
+" https://neovim.io/doc/user/options.html#'completeopt'
+"
+" This will show the popup menu even if there's only one match (menuone),
+" prevent automatic selection (noselect) and prevent automatic text injection
+" into the current line (noinsert).
+set completeopt=noinsert,menuone,noselect
+" tab to select
+" and don't hijack my enter key
+inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>":"\<C-y>"):"\<Tab>")
+inoremap <expr><CR> (pumvisible()?(empty(v:completed_item)?"\<CR>\<CR>":"\<C-y>"):"\<CR>")
 
-" Racer
-let g:racer_cmd = "/home/user/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
 
 " ALE
 let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
 let g:ale_fixers = {
-	  \ 'javascript': ['prettier', 'eslint'],
-	  \ 'css': ['prettier'],
-	  \}
+      \ 'javascript': ['prettier', 'eslint'],
+      \ 'css': ['prettier'],
+      \}
 
 let g:ale_fix_on_save = 1
 
