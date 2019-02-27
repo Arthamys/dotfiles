@@ -35,18 +35,3 @@
   - Nautilus
     RAW/ARW files don't have thumbnails natively under Nautilus.
     Install `ufraw-thumbnailer` to add thumbnail generation for these file types.
-
-## Vim Notes
-
-* Code Completion
-  * Rust
-	install [`racer`](https://github.com/racer-rust/racer), a code completion
-	utility.
-
-* Linting
-  * Rust
-	I'm using [`ALE`](https://github.com/w0rp/ale) as a linting engine across
-	languages.
-
-	For rust I'm using the `rls` (_Rust Language Server_) as a linter, which gives
-	me incremental compilation, as long as the project is a Cargo project
