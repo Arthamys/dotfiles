@@ -388,6 +388,9 @@ let g:UltiSnipsJumpBackwardTrigger=""
 
 " CtrlP
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|target)$',
+  \}
 
 "*****************************************************************************
 "" Autocmd Rules
