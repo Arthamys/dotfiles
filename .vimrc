@@ -8,6 +8,7 @@ set encoding=utf-8
 if has('nvim')
   set runtimepath^=~/.vim runtimepath+=~/.vim/after
   let &packpath = &runtimepath
+  let g:python3_host_prog="/usr/bin/python3"
 endif
 
 set nocompatible
@@ -21,10 +22,12 @@ call plug#begin()
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'tpope/vim-repeat'
 Plug 'skywind3000/asyncrun.vim'
+Plug  'mbbill/undotree'
 
 " Moving around
 Plug 'easymotion/vim-easymotion'
 Plug 'elzr/vim-json'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Status line
 Plug 'bling/vim-airline'
@@ -45,9 +48,9 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'w0rp/ale'
 
 " Completion
+Plug 'w0rp/ale'
 Plug 'autozimu/LanguageClient-neovim', {
       \ 'branch': 'next',
       \ 'do': 'bash install.sh',
