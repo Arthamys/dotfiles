@@ -18,6 +18,8 @@
 * Dunst
   Notification server with icon and transparency support
   [Service might crash when no display environment variable is accesible](https://github.com/dunst-project/dunst/issues/347)
+* Fish
+  A mordern day shell. Using fisher as a package manager for it
 
 * Crontab
   There are no crontab implementation installed by default on Arch.

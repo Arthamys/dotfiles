@@ -17,6 +17,7 @@ abbr -a dockerc 'docker-compose'
 set -x PATH $PATH $HOME/.scripts $HOME/.local/bin $HOME/.bin
 set -x TERM 'screen-256color'
 set -x VISUAL 'nvim'
+set -x RUST_BACKTRACE 1
 
 # Base16 Shell
 if status --is-interactive
