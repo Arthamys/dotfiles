@@ -1,0 +1,24 @@
+snippet idisp "Add fmt::display trait implementation" b
+impl fmt::Display for $1 {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+      write!(f, "", self.0)
+    }
+}
+endsnippet
+
+snippet ideb "Add fmt::Debug trait implementation" b
+impl fmt::Display for $1 {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+      write!(f, "", self.0)
+    }
+}
+endsnippet
+
+snippet ifut "Add future implementatoin" b
+impl Future for ${1} {
+
+    fn poll(mut& self) -> Poll<${2}, ${3}> {
+      ${0}
+    }
+}
+endsnippet
