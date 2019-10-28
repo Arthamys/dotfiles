@@ -22,7 +22,7 @@ call plug#begin()
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'tpope/vim-repeat'
 Plug 'skywind3000/asyncrun.vim'
-Plug  'mbbill/undotree'
+Plug 'mbbill/undotree'
 
 " Moving around
 Plug 'easymotion/vim-easymotion'
