@@ -66,6 +66,9 @@ Plug 'ncm2/ncm2-path'
 Plug 'eagletmt/neco-ghc'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+"Javascript
+Plug 'pangloss/vim-javascript'
+
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
 
@@ -279,7 +282,8 @@ nnoremap <C-P> :Gpush<CR>
 " https://github.com/autozimu/LanguageClient-neovim/issues/603
 let g:LanguageClient_settingsPath = expand('~/.config/nvim/lcs_settings.json')
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['/usr/bin/rls'],
+    \ 'rust': [$HOME.'/.cargo/bin/rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ }
 let g:LanguageClient_autoStart = 1
 " Nice errors
