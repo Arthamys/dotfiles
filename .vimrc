@@ -394,7 +394,8 @@ let g:UltiSnipsJumpForwardTrigger=""
 let g:UltiSnipsJumpBackwardTrigger=""
 
 " CtrlP
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_custom_ignore='target\|.git'
 
 "*****************************************************************************
 "" Autocmd Rules
