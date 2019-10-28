@@ -59,6 +59,7 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 " additional completion plugins
+Plug 'ncm2/ncm2-ultisnips'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
@@ -339,7 +340,9 @@ set completeopt=noinsert,menuone,noselect
 " and don't hijack my enter key
 inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>":"\<C-y>"):"\<Tab>")
 inoremap <expr><CR> (pumvisible()?(empty(v:completed_item)?"\<CR>\<CR>":"\<C-y>"):"\<CR>")
-
+" Press enter key to trigger snippet expansion
+" The parameters are the same as `:help feedkeys()`
+inoremap <silent> <buffer> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 
 " ALE
 let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
@@ -390,13 +393,16 @@ endif
 let g:pandoc#syntax#codeblocks#embeds#langs = ["ruby", "c", "haskell", "bash=sh", "cpp", "javascript"]
 
 " UltiSnip
-let g:UltiSnipsExpandTrigger="<C-l>"
-let g:UltiSnipsJumpForwardTrigger=""
-let g:UltiSnipsJumpBackwardTrigger=""
+let g:UltiSnipsEditSplit="vertical"
+
+let g:UltiSnipsExpandTrigger = "<Plug>(ultisnips_expand)"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/vim-snippets/snippets', '~/.vim/UltiSnips', 'UltiSnips']
 
 " CtrlP
-let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_custom_ignore='target\|.git'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|target)$',
+  \}
 
 "*****************************************************************************
 "" Autocmd Rules

@@ -1,0 +1,38 @@
+snippet idisp "impl fmt::Display" b
+impl fmt::Display for $1 {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+      write!(f, "", self.0)
+    }
+}
+endsnippet
+
+snippet ideb "impl fmt::Debug" b
+impl fmt::Display for $1 {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+      write!(f, "", self.0)
+    }
+}
+endsnippet
+
+snippet ifut "impl Future" b
+impl Future for ${1} {
+    type Item = ${2};
+    type Error = ${3};
+
+
+    fn poll(mut& self) -> Poll<Self::Item, Self::Error> {
+      ${0}
+    }
+}
+endsnippet
+
+snippet istream "impl future::Stream" b
+impl Stream for ${1} {
+    type Item = ${2};
+    type Error = ${3};
+
+    fn poll(mut& self) -> Poll<Option<Self::Item>, Self::Error> {
+      ${0}
+    }
+}
+endsnippet

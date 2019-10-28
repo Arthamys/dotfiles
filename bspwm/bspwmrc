@@ -58,5 +58,5 @@ bspc rule -a Firefox desktop='^2'
 #nm-applet &
 # Should help with screen tearing
 compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil &
-feh --bg-scale ~/.wallpapers/foggy-forest.jpg
+feh --bg-fill ~/Pictures/brick-skyscaper-valentino-funghi.jpg
 $HOME/.config/polybar/launch.sh
