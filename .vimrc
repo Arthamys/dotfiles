@@ -22,7 +22,7 @@ call plug#begin()
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'tpope/vim-repeat'
 Plug 'skywind3000/asyncrun.vim'
-Plug  'mbbill/undotree'
+Plug 'mbbill/undotree'
 
 " Moving around
 Plug 'easymotion/vim-easymotion'
@@ -68,6 +68,9 @@ Plug 'ncm2/ncm2-racer'
 
 Plug 'eagletmt/neco-ghc'
 Plug 'octol/vim-cpp-enhanced-highlight'
+
+"Javascript
+Plug 'pangloss/vim-javascript'
 
 "Haskell
 Plug 'neovimhaskell/haskell-vim'
@@ -179,10 +182,11 @@ let g:rustfmt_autosave = 1
 "*****************************************************************************
 "let g:gruvbox_contrast_dark='soft'
 " In order to have matching vim theme and shell theme using base 16
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+"if filereadable(expand("~/.vimrc_background"))
+  "let base16colorspace=256
+  "source ~/.vimrc_background
+"endif
+color Tomorrow-Night
 syntax on
 
 
@@ -279,7 +283,8 @@ nnoremap <C-A> :Gwrite<CR>
 " https://github.com/autozimu/LanguageClient-neovim/issues/603
 let g:LanguageClient_settingsPath = expand('~/.config/nvim/lcs_settings.json')
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['/usr/bin/rls'],
+    \ 'rust': [$HOME.'/.cargo/bin/rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ }
 let g:LanguageClient_autoStart = 1
 " Nice errors
