@@ -48,6 +48,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'liuchengxu/vista.vim'
 
 " Completion
 Plug 'w0rp/ale'
@@ -63,6 +64,7 @@ Plug 'ncm2/ncm2-ultisnips'
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-racer'
 
 Plug 'eagletmt/neco-ghc'
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -72,9 +74,6 @@ Plug 'neovimhaskell/haskell-vim'
 
 "Rust
 Plug 'rust-lang/rust.vim'
-
-"Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 "Api Blueprint
 Plug 'kylef/apiblueprint.vim'
@@ -94,6 +93,7 @@ Plug 'morhetz/gruvbox'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'chriskempson/base16-vim'
 Plug 'connorholyday/vim-snazzy'
+Plug 'liuchengxu/space-vim-theme'
 
 " Writting
 Plug 'junegunn/goyo.vim'
@@ -269,7 +269,6 @@ map <Leader><space> <Plug>(easymotion-prefix)
 "Fugitive keybinds
 nnoremap <C-K> :Gcommit<CR>
 nnoremap <C-A> :Gwrite<CR>
-nnoremap <C-P> :Gpush<CR>
 
 "Language Client
 " work around the lack of a global language client settings file:
@@ -337,16 +336,20 @@ inoremap <expr><Tab> (pumvisible()?(empty(v:completed_item)?"\<C-n>":"\<C-y>"):"
 inoremap <expr><CR> (pumvisible()?(empty(v:completed_item)?"\<CR>\<CR>":"\<C-y>"):"\<CR>")
 " Press enter key to trigger snippet expansion
 " The parameters are the same as `:help feedkeys()`
-inoremap <silent> <buffer> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+"inoremap <silent> <buffer> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
 
 " ALE
-let g:ale_linters = {'rust': ['rls'], 'haskell': ['stack-build']}
+let g:ale_sign_highlight_linenrs = 1
+let g:ale_set_signs = 1
+let g:ale_set_highlights = 0
+let g:ale_linters = {'rust': ['racer', 'rls'], 'haskell': ['stack-build']}
 let g:ale_fixers = {
       \ 'javascript': ['prettier', 'eslint'],
       \ 'css': ['prettier'],
       \}
 
 let g:ale_fix_on_save = 1
+let g:ale_set_balloons = 1
 
 " Vim Airline
 "let g:airline_powerline_fonts = 1
