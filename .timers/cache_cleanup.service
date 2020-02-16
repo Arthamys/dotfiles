@@ -1,0 +1,6 @@
+[Unit]
+Description=Remove versions older than latest in pacman cache
+
+[Service]
+User=root
+ExecStart=/home/san/.scripts/clear_pacman_cache.sh
