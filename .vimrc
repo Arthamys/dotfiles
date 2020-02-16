@@ -322,7 +322,8 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> gr :call LanguageClient#textDocument_rename()<CR>
+nnoremap <silent> gs :call LanguageClient#textDocument_documentSymbol()<CR>
 
 " Completion / ncm2
 autocmd BufEnter * call ncm2#enable_for_buffer()
@@ -364,7 +365,7 @@ let g:airline_symbols.left_sep='|'
 let g:airline_symbols.right_sep='|'
 let g:airline_symbols.readonly=''
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='angr'
+let g:airline_theme='fruit_punch'
  " For compatibility with Ctrl-Space
 let g:airline_executable_preview = 1
 set noshowmode
