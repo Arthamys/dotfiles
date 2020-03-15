@@ -282,7 +282,7 @@ nnoremap <C-A> :Gwrite<CR>
 " https://github.com/autozimu/LanguageClient-neovim/issues/603
 let g:LanguageClient_settingsPath = expand('~/.config/nvim/lcs_settings.json')
 let g:LanguageClient_serverCommands = {
-    \ 'rust': [$HOME.'/.cargo/bin/rls'],
+    \ 'rust': ['/usr/bin/rustup', 'run', 'nightly', 'rls'],
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ }
 let g:LanguageClient_autoStart = 1
