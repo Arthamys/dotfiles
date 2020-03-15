@@ -6,14 +6,9 @@ killall -q polybar
 # Wait for the processes to shut down
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
-MONITORS=$(xrandr -q | grep "*" | wc -l)
+polybar main -q -r &
 
-#if [ "$MONITORS" -eq 2 ]; then
-  #polybar main -q &
-  #polybar right -q &
-  #echo "Launched the main bar and the right bar"
-#elif [ "$MONITORS" -eq 1 ]; then
-  polybar main -q -r &
-  echo "Launched the main bar"
-#fi
-
+my_laptop_external_monitor=$(xrandr --query | grep 'HDMI-1')
+if [[ $my_laptop_external_monitor = *connected* ]]; then
+  polybar top_external -q -r &
+fi

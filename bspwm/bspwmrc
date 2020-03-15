@@ -60,3 +60,10 @@ bspc rule -a Firefox desktop='^2'
 compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil &
 feh --bg-fill ~/Pictures/brick-skyscaper-valentino-funghi.jpg
 $HOME/.config/polybar/launch.sh
+
+# run the xrandr command if an external monitor is connected to the
+# laptop.  This must be executed before the polybar command, so that
+# polybar can set the two separate bars properly.
+if [ -x $HOME/.scripts/dual_scr_bsp.sh  ];then
+    $HOME/.scripts/dual_scr_bsp.sh
+fi
