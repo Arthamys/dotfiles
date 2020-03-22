@@ -47,3 +47,4 @@
       if: '[ not test -e ~/.gitconfig ]'
       path: .gitconfig
     ~/.tmux.conf: .tmux.conf
+    ~/.gdbinit: .gdbinit
