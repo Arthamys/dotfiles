@@ -1,0 +1,46 @@
+- defaults:
+    link:
+      relink: true # Override symlinks
+      create: true # Automatically create parent directories
+
+- clean: ['~'] # Remove dead symbolic links pointing to dotfiles in this dir
+
+- link:
+  ~/.config/fish/config.fish:
+    path: config/fish/config.fish
+  ~/.bashrc:
+    path: .bashrc
+  ~/.scripts/:
+    glob: true
+    path: .scripts/*
+  ~/.config/kitty/kitty.conf:
+    path: config/kitty/kitty.conf
+  ~/.config/nvim/init.vim:
+    path: .vimrc
+  ~/.vimrc:
+    path: .vimrc
+  ~/.config/polybar:
+    if: '[ `uname -a` = Linux ]'
+    path: config/polybar
+  ~/.config/rofi/:
+    if: '[ `uname -a` = Linux ]'
+    glob: true
+    path: config/rofi/*
+  ~/.config/sxhkd/:
+    if: '[ `uname -a` = Linux ]'
+    glob: true
+    path: config/sxhkd/*
+  ~/.config/bspwm/:
+    if: '[ `uname -a` = Linux ]'
+    glob: true
+    path: config/bspwm/*
+  ~/.config/dunst/:
+    glob: true
+    path: config/dunst/*
+  ~/.config/systemd/user/:
+    if: '[ -z `which systemctl 2> /dev/null` ]'
+    path: config/systemd/user/*
+    glob: true
+  ~/.emacs: .emacs
+  ~/.gitconfig: .gitconfig
+  ~/.tmux.conf: .tmux.conf
