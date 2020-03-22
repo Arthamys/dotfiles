@@ -74,6 +74,7 @@ wm-restack = bspwm
 bottom = false
 monitor = HDMI-1
 
+; TODO make size match actual screen size
 width = 1900
 height = 30
 
