@@ -1,4 +1,14 @@
-# Personnal dotfiles for Archlinux
+# Personnal dotfiles for \*Nix/Linux
+
+Installation is automated. To run the installation script:
+
+``` bash
+./install
+```
+
+To check what gets installed, check out the file `install.conf.yaml`
+
+Remember to register the timers to systemctl !
 
 ## General Application Notes
 
