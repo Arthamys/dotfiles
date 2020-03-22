@@ -24,10 +24,11 @@ set -x RUST_BACKTRACE 1
 
 # Base16 Shell
 if status --is-interactive
-    set BASE16_SHELL "$HOME/.config/base16-shell/"
-    source "$BASE16_SHELL/profile_helper.fish"
+	set BASE16_SHELL "$HOME/.config/base16-shell/"
+	source "$BASE16_SHELL/profile_helper.fish"
 end
 
+# Start TMUX automatically if we are in an graphical environment
 set d (string trim -- $DISPLAY)
 if test (echo $d) != ''
 	tmux ^ /dev/null; and exec true
