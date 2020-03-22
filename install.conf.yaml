@@ -6,7 +6,6 @@
   # Remove dead symbolic links pointing to dotfiles in this dir
 - clean: ['~', '~/.config']
 
-
 - link:
     ~/.config/fish/config.fish:
       path: config/fish/config.fish
@@ -44,6 +43,7 @@
       glob: true
     ~/.emacs: .emacs
     ~/.gitconfig:
+      # only if there are no config already present
       if: '[ not test -e ~/.gitconfig ]'
       path: .gitconfig
     ~/.tmux.conf: .tmux.conf
