@@ -53,6 +53,11 @@ else
 	abbr -a la 'ls -la'
 end
 
+if command -v btm > /dev/null
+	abbr -a htop btm
+	abbr -a top btm
+end
+
 if [ -e /usr/share/fish/functions/fzf_key_bindings.fish ]; and status --is-interactive
 	source /usr/share/fish/functions/fzf_key_bindings.fish
 end
