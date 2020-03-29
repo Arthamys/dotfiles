@@ -22,7 +22,9 @@ There are two things you can do about this warning:
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (elixir-mode moe-theme use-package rust-mode evil))))
+ '(package-selected-packages
+   (quote
+    (markdown-mode elixir-mode moe-theme use-package rust-mode evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,9 +45,19 @@ There are two things you can do about this warning:
 (ido-mode 1)
 (setq ido-enable-flex-matching t)
 
+
+(setq backup-directory-alist '(("." . "/tmp/emacs_backup")))
+(setq backup-by-copying t) ; copy whole file to backup dir
+(setq delete-old-versions t ; keep a limited number of versions
+  kept-new-versions 6
+  kept-old-versions 2
+  version-control t) ; use numbers to version the files
+
 (require 'evil)
 (evil-mode 1)
 (define-key evil-normal-state-map (kbd ";") 'evil-ex)
+
 (require 'moe-theme)
 (moe-dark)
+
 (require 'elixir-mode)
