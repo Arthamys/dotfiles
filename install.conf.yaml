@@ -48,3 +48,5 @@
       path: .gitconfig
     ~/.tmux.conf: .tmux.conf
     ~/.gdbinit: .gdbinit
+    ~/.config/ranger/rc.conf:
+      path: config/ranger/rc.conf
