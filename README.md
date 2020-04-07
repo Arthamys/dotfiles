@@ -39,6 +39,10 @@ Remember to register the timers to systemctl !
   `~/.config/systemd/ user/` and start the `.timer` job with:
   `systemctl --user enable timer`.
 
+
+* picom
+  Compton seems abandoned and has been replaced by picom
+
 * RAW Files
 
   - GIMP

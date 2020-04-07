@@ -50,3 +50,6 @@
     ~/.gdbinit: .gdbinit
     ~/.config/ranger/rc.conf:
       path: config/ranger/rc.conf
+    ~/.config/picom/picom.conf:
+      if: '[ (uname) = "Linux" ]'
+      path: config/picom/picom.conf

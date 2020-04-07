@@ -56,8 +56,8 @@ bspc rule -a Firefox desktop='^2'
 #tint2 -c ~/.config/tint2/trayrc &
 #sleep 1s && tint2 -c ~/.config/tint2/taskbarrc &
 #nm-applet &
-# Should help with screen tearing
-compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil &
+# -b -> run as daemon
+picom -b &
 feh --bg-fill ~/Pictures/japan_doorway_pixelart.png
 $HOME/.config/polybar/launch.sh
 
