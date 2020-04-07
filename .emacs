@@ -25,7 +25,7 @@ There are two things you can do about this warning:
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (markdown-mode elixir-mode moe-theme use-package rust-mode evil))))
+    (toml-mode markdown-mode elixir-mode moe-theme use-package rust-mode evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
