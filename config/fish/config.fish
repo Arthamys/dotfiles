@@ -85,10 +85,18 @@ function ccd
 end
 
 # Fish git prompt
-set __fish_git_prompt_showuntrackedfiles 'yes'
-set __fish_git_prompt_showdirtystate 'yes'
-set __fish_git_prompt_showstashstate ''
-set __fish_git_prompt_showupstream 'none'
+set __fish_git_prompt_char_dirtystate ''
+set __fish_git_prompt_color_dirtystate 'blue'
+set __fish_git_prompt_char_invalidstate ''
+set __fish_git_prompt_color_invalidstate 'red'
+set __fish_git_prompt_char_stashstate ''
+set __fish_git_prompt_color_stashstate 'yellow'
+set __fish_git_prompt_char_cleanstate ''
+set __fish_git_prompt_char_untrackedfiles ''
+set __fish_git_prompt_color_untrackedfiles 'red'
+set __fish_git_prompt_char_stagedstate ''
+set __fish_git_prompt_color_stagedstate 'yellow'
+set __fish_git_prompt_show_informative_status
 set -g fish_prompt_pwd_dir_length 3
 
 # colored man output
@@ -133,7 +141,7 @@ function fish_prompt
 		echo -n (basename $PWD)
 	end
 	set_color green
-	printf '%s ' (__fish_git_prompt)
+	printf '%s ' (fish_git_prompt)
 	set_color red
 	echo -n '| '
 	set_color normal
