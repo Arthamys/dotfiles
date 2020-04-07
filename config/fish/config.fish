@@ -85,6 +85,7 @@ function ccd
 end
 
 # Fish git prompt
+# see /usr/share/fish/functions/fish_git_prompt.fish for more info
 set __fish_git_prompt_char_dirtystate ''
 set __fish_git_prompt_color_dirtystate 'blue'
 set __fish_git_prompt_char_invalidstate ''
