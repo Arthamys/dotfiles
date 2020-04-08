@@ -9,6 +9,6 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 polybar main -q -r &
 
 my_laptop_external_monitor=$(xrandr --query | grep 'HDMI-1')
-if [[ $my_laptop_external_monitor = *connected* ]]; then
-  polybar top_external -q -r &
+if [[ $my_laptop_external_monitor = connected* ]]; then
+  polybar external_monitor -c ~/.config/polybar/external_monitor.ini -q -r &
 fi

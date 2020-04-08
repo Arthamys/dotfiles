@@ -58,6 +58,7 @@ bspc rule -a Firefox desktop='^2'
 #nm-applet &
 # -b -> run as daemon
 picom -b &
+wal -R -s -t -n
 feh --bg-fill ~/Pictures/japan_doorway_pixelart.png
 $HOME/.config/polybar/launch.sh
 

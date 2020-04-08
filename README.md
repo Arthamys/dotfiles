@@ -39,6 +39,9 @@ Remember to register the timers to systemctl !
   `~/.config/systemd/ user/` and start the `.timer` job with:
   `systemctl --user enable timer`.
 
+* pywal
+  I use `python-pywal` to generate colorschemes that match the dominant
+  colors used in my wallpaper.
 
 * picom
   Compton seems abandoned and has been replaced by picom
