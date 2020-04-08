@@ -5,8 +5,8 @@
 
 UPDATE_COUNT=$(checkupdates | wc -l)
 if [ "$UPDATE_COUNT" -gt 0 ]; then
-  upd=' '$UPDATE_COUNT
+  upd=' '$UPDATE_COUNT
   echo $upd
 else
-  echo ' '
+  echo ''
 fi
