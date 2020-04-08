@@ -86,18 +86,22 @@ end
 
 # Fish git prompt
 # see /usr/share/fish/functions/fish_git_prompt.fish for more info
-set __fish_git_prompt_char_dirtystate ''
-set __fish_git_prompt_color_dirtystate 'blue'
+set __fish_git_prompt_show_informative_status 1
+set __fish_git_prompt_showupstream 'none'
+
+set __fish_git_prompt_char_cleanstate ''
+set __fish_git_prompt_char_dirtystate 'ﴜ'
 set __fish_git_prompt_char_invalidstate ''
+set __fish_git_prompt_char_stashstate ''
+set __fish_git_prompt_char_stagedstate ''
+set __fish_git_prompt_char_untrackedfiles 'ﱐ'
+
+set __fish_git_prompt_color_dirtystate 'blue'
 set __fish_git_prompt_color_invalidstate 'red'
-set __fish_git_prompt_char_stashstate ''
 set __fish_git_prompt_color_stashstate 'yellow'
-set __fish_git_prompt_char_cleanstate ''
-set __fish_git_prompt_char_untrackedfiles ''
-set __fish_git_prompt_color_untrackedfiles 'red'
-set __fish_git_prompt_char_stagedstate ''
 set __fish_git_prompt_color_stagedstate 'yellow'
-set __fish_git_prompt_show_informative_status
+set __fish_git_prompt_color_untrackedfiles 'red'
+
 set -g fish_prompt_pwd_dir_length 3
 
 # colored man output
