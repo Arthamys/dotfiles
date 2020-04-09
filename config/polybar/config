@@ -42,7 +42,7 @@ module-margin-right = 2
 
 modules-left = bspwm
 modules-center = date
-modules-right = backlight volume wifi wired battery updates
+modules-right = backlight bluetooth volume wifi wired battery updates
 
 tray-position = right
 
