@@ -21,7 +21,8 @@
       path: .vimrc
     ~/.config/polybar:
       if: '[ (uname) = "Linux" ]'
-      path: config/polybar
+      glob: true
+      path: config/polybar/*
     ~/.config/rofi/:
       if: '[ (uname) = "Linux" ]'
       glob: true
