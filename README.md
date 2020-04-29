@@ -10,6 +10,13 @@ To check what gets installed, check out the file `install.conf.yaml`
 
 Remember to register the timers to systemctl !
 
+Default directories are created following XDG conventions, see
+man 1 xdg-user-dir for more info.
+
+You can change the default `.cache` directory to another disk if it's taking
+up too much space on your main disk by exporting `$XDG_CACHE_HOME` in your
+`/etc/profile`
+
 ## General Application Notes
 
 * Tmux
