@@ -129,7 +129,7 @@ set visualbell t_vb=
 set splitright
 
 set clipboard=unnamedplus
-set mouse-=a
+set mouse=a
 set hidden
 set nofoldenable
 
