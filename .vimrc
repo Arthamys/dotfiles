@@ -168,6 +168,7 @@ let g:rustfmt_autosave = 1
 "*****************************************************************************
 "" Styling
 "*****************************************************************************
+"color seoul256
 "let g:gruvbox_contrast_dark='soft'
 " In order to have matching vim theme and shell theme using base 16
 if filereadable(expand("~/.vimrc_background"))
@@ -317,6 +318,9 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
