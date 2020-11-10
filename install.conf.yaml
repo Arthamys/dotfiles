@@ -54,3 +54,6 @@
     ~/.config/picom/picom.conf:
       if: '[ (uname) = "Linux" ]'
       path: config/picom/picom.conf
+      ~/.XCompose:
+      if: '[ (uname) = "Linux" ]'
+      path: config/XCompose

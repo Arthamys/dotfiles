@@ -1,0 +1,8 @@
+<Multi_key> <g> <A>            : "Α"   U0391    # GREEK CAPITAL LETTER ALPHA
+<Multi_key> <g> <a>            : "α"   U03B1    # GREEK SMALL LETTER ALPHA
+<Multi_key> <g> <B>            : "Β"   U0392    # GREEK CAPITAL LETTER BETA
+<Multi_key> <g> <b>            : "β"   U03B2    # GREEK SMALL LETTER BETA
+<Multi_key> <g> <D>            : "Δ"   U0394    # GREEK CAPITAL LETTER DELTA
+<Multi_key> <g> <d>            : "δ"   U03B4    # GREEK SMALL LETTER DELTA
+<Multi_key> <g> <E>            : "Ε"   U0395    # GREEK CAPITAL LETTER EPSILON
+<Multi_key> <g> <e>            : "ε"   U03B5    # GREEK SMALL LETTER EPSILON
