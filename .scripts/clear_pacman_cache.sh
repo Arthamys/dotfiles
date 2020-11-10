@@ -8,4 +8,4 @@ set -e
 latest_versions=$(pacman -Qe | perl -pe 's|(.*?) (.*?)\n|\1-\2-\*\||')
 cd /var/cache/pacman/pkg
 outdated_versions=$(exa -I "$latest_versions")
-rm $outdated_versions
+sudo rm $outdated_versions
