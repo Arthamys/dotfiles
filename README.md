@@ -13,9 +13,15 @@ Remember to register the timers to systemctl !
 Default directories are created following XDG conventions, see
 man 1 xdg-user-dir for more info.
 
+~~
 You can change the default `.cache` directory to another disk if it's taking
 up too much space on your main disk by exporting `$XDG_CACHE_HOME` in your
 `/etc/profile`
+~~
+
+run `xdg-user-dirs-update --set CACHE <path_to_cache_dir>` to update the
+`~/.config/user-dirs.dirs` file, which is checked by XDG for the paths of the
+different default directories
 
 ## General Application Notes
 
